@@ -90,11 +90,11 @@ if(deleteExistingCards.lower() == 'y'):
 
 whiteCardFile = input('Enter the path to the white card text file: ')
 
-with open(whiteCardFile, newline='', encoding="utf8") as csvfile:
+with open(whiteCardFile, newline='', encoding="utf8") as whiteCards:
 
-   reader2 = csv.reader(csvfile, delimiter='\n', quotechar='|')
+   reader = csv.reader(whiteCards, delimiter='\n', quotechar='|')
 
-   for row in reader2:
+   for row in reader:
         
         rowStr = ''.join(row)
         rowNoSpaces = rowStr.strip(' \t\n\r')
@@ -108,11 +108,11 @@ with open(whiteCardFile, newline='', encoding="utf8") as csvfile:
 
 whiteCardFile = input('Enter the path to the black card text file: ')
 
-with open('baiblack.tsv', newline='', encoding="utf8") as csvfile:
+with open('baiblack.tsv', newline='', encoding="utf8") as blackCards:
 
-   reader3 = csv.reader(csvfile, delimiter='\n', quotechar='|')
+   reader2 = csv.reader(blackCards, delimiter='\n', quotechar='|')
 
-   for row in reader3:
+   for row in reader2:
         
         rowStr = ''.join(row)
         rowNoSpaces = rowStr.strip(' \t\n\r')
