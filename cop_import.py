@@ -10,7 +10,7 @@ from selenium.webdriver.common.alert import Alert
 from selenium.common.exceptions import NoAlertPresentException
 import csv
 
-url = 'https://www.cardsofpersonality.com/edit-deck/akldsfhj;alsdkjf?secret=675e2585c8f7c700390b432d' #input('Welcome to the python cards of personality importer. Please enter the full URL to the edit page of your set of cards: ')
+url = input('Welcome to the python cards of personality importer. Please enter the full URL to the edit page of your set of cards: ')
 
 # should be formatted like https://www.cardsofpersonality.com/edit-deck/DECK-NAME?secret=XYZ
 
@@ -88,7 +88,7 @@ if(deleteExistingCards.lower() == 'y'):
             deletedcards += 1
             print('{} black cards deleted'.format(deletedcards))
 
-whiteCardFile = 'C:\\Users\\winch\\Desktop\\white_cards_notepad.txt' #input('Enter the path to the white card text file: ')
+whiteCardFile = input('Enter the path to the white card text file: ')
 
 with open(whiteCardFile, newline='', encoding="utf8") as whiteCards:
 
